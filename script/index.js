@@ -31,14 +31,14 @@ getElement("card-box").addEventListener("click", function (e) {
     //    ---------------🪙🪙🪙🪙------------//
     const totalCoin = getElement("coin-count").innerText;
     if (totalCoin < 20) {
-      alert("Insufficient Coin");
+      alert("❌Insufficient Coin");
       return;
     }
     // console.log(totalCoin);
     const currentCoin = Number(totalCoin) - 20;
     getElement("coin-count").innerText = currentCoin;
 
-    alert(helplineHead + ": " + helplineNum);
+    alert("📞 Calling " +helplineHead + ": " + helplineNum);
 
     //   --------------history box----------//
 
@@ -46,7 +46,7 @@ getElement("card-box").addEventListener("click", function (e) {
     const newHistory = document.createElement("div");
     newHistory.innerHTML = `
           <div
-              class="flex items-center justify-between p-4 bg-[#FAFAFA] my-1 rounded-lg"
+              class="flex items-center justify-between p-4 bg-[#FAFAFA] my-2 rounded-lg"
             >
               <div>
                 <h2 class="text-lg">${helplineHead}</h2>
