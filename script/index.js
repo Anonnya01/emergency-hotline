@@ -18,13 +18,13 @@ getElement("card-box").addEventListener("click", function (e) {
   if (e.target.className.includes("call-btn")) {
     //  alert("clicked")
     const callBtn = e.target;
-    console.log(callBtn);
+    // console.log(callBtn);
 
     const helplineHead = callBtn.parentNode.parentNode.children[1].innerText;
-    console.log(helplineHead);
+    // console.log(helplineHead);
 
     const helplineNum = callBtn.parentNode.parentNode.children[3].innerText;
-    console.log(helplineNum);
+    // console.log(helplineNum);
 
     const timeNow = new Date().toLocaleTimeString();
 
@@ -34,7 +34,7 @@ getElement("card-box").addEventListener("click", function (e) {
       alert("Insufficient Coin");
       return;
     }
-    console.log(totalCoin);
+    // console.log(totalCoin);
     const currentCoin = Number(totalCoin) - 20;
     getElement("coin-count").innerText = currentCoin;
 
@@ -59,11 +59,6 @@ getElement("card-box").addEventListener("click", function (e) {
             </div>
             `;
     historyCont.append(newHistory);
-
-    //      const totalPrice = getElement("total-price").innerText;
-
-    //     const currentPrice = Number(productPrice) + Number(totalPrice);
-    //     getElement("total-price").innerText = currentPrice;
   }
 });
 
@@ -71,4 +66,34 @@ getElement("card-box").addEventListener("click", function (e) {
 document.getElementById("btn-clear").addEventListener("click", function () {
   const cartContainer = getElement("history-box");
   cartContainer.innerHTML = "";
+});
+
+// ---------------------------end-----------------------//
+
+// ------------------copy count-------------------//
+
+getElement("card-box").addEventListener("click", function (e) {
+  if (e.target.className.includes("copy-btn")) {
+    const copyCount = getElement("copy-count").innerText;
+    let total = Number(copyCount) + 1;
+    getElement("copy-count").innerText = total;
+  }
+});
+// -----------copy number---------------//
+
+getElement("card-box").addEventListener("click", function (e) {
+  if (e.target.className.includes("copy-btn")) {
+    //  alert("clicked")
+    const copyBtn = e.target;
+    // console.log(copyBtn);
+
+    const helplineHead = copyBtn.parentNode.parentNode.children[1].innerText;
+    // console.log(helplineHead);
+
+    const copyNum = copyBtn.parentNode.parentNode.children[3].innerText;
+    // console.log(copyNum);
+
+    navigator.clipboard.writeText(copyNum);
+    alert(helplineHead + " Copied: " + copyNum);
+  }
 });
