@@ -31,7 +31,7 @@ getElement("card-box").addEventListener("click", function (e) {
     //    ---------------🪙🪙🪙🪙------------//
     const totalCoin = getElement("coin-count").innerText;
     if (totalCoin < 20) {
-      alert("❌Insufficient Coin");
+      alert("❌Insufficient Coins");
       return;
     }
     // console.log(totalCoin);
