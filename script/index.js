@@ -20,11 +20,13 @@ getElement("card-box").addEventListener("click", function (e) {
     const callBtn = e.target;
     // console.log(callBtn);
 
-    const helplineHead = callBtn.parentNode.parentNode.children[1].innerText;
-    // console.log(helplineHead);
+    const helplineHead =
+      callBtn.parentNode.parentNode.children[1].children[0].innerText;
+    console.log(helplineHead);
 
-    const helplineNum = callBtn.parentNode.parentNode.children[3].innerText;
-    // console.log(helplineNum);
+    const helplineNum =
+      callBtn.parentNode.parentNode.children[1].children[2].innerText;
+    console.log(helplineNum);
 
     const timeNow = new Date().toLocaleTimeString();
 
@@ -38,7 +40,7 @@ getElement("card-box").addEventListener("click", function (e) {
     const currentCoin = Number(totalCoin) - 20;
     getElement("coin-count").innerText = currentCoin;
 
-    alert("📞 Calling " +helplineHead + ": " + helplineNum);
+    alert("📞 Calling " + helplineHead + ": " + helplineNum);
 
     //   --------------history box----------//
 
@@ -87,11 +89,13 @@ getElement("card-box").addEventListener("click", function (e) {
     const copyBtn = e.target;
     // console.log(copyBtn);
 
-    const helplineHead = copyBtn.parentNode.parentNode.children[1].innerText;
+    const helplineHead =
+      copyBtn.parentNode.parentNode.children[1].children[0].innerText;
     // console.log(helplineHead);
 
-    const copyNum = copyBtn.parentNode.parentNode.children[3].innerText;
-    // console.log(copyNum);
+    const copyNum =
+      copyBtn.parentNode.parentNode.children[1].children[2].innerText;
+    console.log(copyNum);
 
     navigator.clipboard.writeText(copyNum);
     alert(helplineHead + " Copied: " + copyNum);
