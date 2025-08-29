@@ -35,6 +35,9 @@ returns a NodeList similar to getElementsByClassName.
   ##  4.Event Delegation
   Event Delegation is a JavaScript technique where instead of attaching an event listener to every single child element, you attach a single listener to their common parent element.
 
+  Combining with Traverse method the js functioning became easier and the code was cleaner.Array looping is
+  not necessary in this way.Its a more efficient way.
+
   1.Improved Performance and Memory Efficiency.Also easier to maintain multiple similar actions.
   2.The code becomes more cleaner and easy to understand.
   3.Handles dynamically added elements.

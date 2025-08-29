@@ -22,11 +22,11 @@ getElement("card-box").addEventListener("click", function (e) {
 
     const helplineHead =
       callBtn.parentNode.parentNode.children[1].children[0].innerText;
-    console.log(helplineHead);
+    // console.log(helplineHead);
 
     const helplineNum =
       callBtn.parentNode.parentNode.children[1].children[2].innerText;
-    console.log(helplineNum);
+    // console.log(helplineNum);
 
     const timeNow = new Date().toLocaleTimeString();
 
@@ -95,7 +95,7 @@ getElement("card-box").addEventListener("click", function (e) {
 
     const copyNum =
       copyBtn.parentNode.parentNode.children[1].children[2].innerText;
-    console.log(copyNum);
+    // console.log(copyNum);
 
     navigator.clipboard.writeText(copyNum);
     alert(helplineHead + " Copied: " + copyNum);
